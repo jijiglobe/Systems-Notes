@@ -1,0 +1,8 @@
+While primitives normally have one bit to denote their sign (+/-)
+
+It is possible to declare any primitive as unsigned. This allows you to hold twice large numbers at the expense of not being able to have negative variables
+
+   private unsigned Int x; //would declare a new unsigned int x
+
+To compile C programs use gcc -o [outputfilename]
+To run use ./[filename]
