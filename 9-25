@@ -1,0 +1,31 @@
+Pointers are variables designed to store memory addresses.
+	 They solve issues that used to comprise huge security holes where arrays and whatnot could extend off into parts of memory that they weren't supposed to access
+	 Pointers keep track of what data is stored where
+	 
+
+	 int fred;
+	     this code creates a variable named fred, however, fred just points to a random address in memory (ie 1000)
+	     
+	     a pointer named pfred would store the value 1000 because that's the address of fred in this instance
+	     pfred however, may have a completely different memory address
+
+	     to retreive the address of a variable use &variableName
+
+	 Most computers have a 64 or 32 bit processor. This means that in one processor cycle, that number of bits is processed
+	      This means that the maximum pointer value in a 32 bit machine is MAXINT which means that  32 bit computers can't have more than 4GB of memory
+	      64 bit processor can fit an insane amount of memory, to the point where MAXLONG is not effectively restrictive on RAM size
+	      
+
+	  Now noticeably, when you declare two ints consecutively, they will always be 4 bytes apart in memory. This is because they are created one after another and C will always use the next available piece of memory
+
+	  Be careful though because this behaviour is unreliable, and sometimes the compiler will assign memory values where there is a random opening or group different data types together in memory
+
+NOW LET'S GET OUR HANDS DIRTY
+
+    * is the character used to create pointers
+    for instance, to store the pointer in an int 
+    
+    int *pfred = &fred;
+    	This line creates a pointer called pfred that points to fred
+
+	even though pfred is an int, it is 8 bytes long so that it can handle every possible memory address
