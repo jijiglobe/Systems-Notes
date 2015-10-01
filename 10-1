@@ -1,0 +1,17 @@
+int strlen( char *s)
+    returns the length of the string not including the terminating null
+
+char * strcopy(char *dest, char *source)
+     copies all the values from source up till the terminating null into *dest. Watch out if *dest doesn't have enough space.
+     returns dest
+
+char strcat(char *s1, char *s2)
+     concatenates all the characters from s2 up to the terminating null into s1 starting by overwriting s1's terminating null
+
+most str functions have strn versions which take an extra parameter and sets the number maximum number of bytes that will be operated on
+
+for instance:
+
+char strncat(char *s1, char *s2, int n)
+     will concatenate bytes from s2 onto s1 as in strcat, however, it will stop if it copies n bytes without hitting a null
+
