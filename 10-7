@@ -1,0 +1,31 @@
+dynamic memory allocation
+	malloc(int x):
+		   allocates x bytes of memory(from the heap)
+
+		   returns the address at the beginning of allocation
+
+		   returns a void * always typecast to the correct pointer type
+		   
+		   int *p;
+		   p = (int *)malloc(5*sizeof(int));
+	calloc(int x, int x):
+		   same as malloc but it clears the memory. also it allocates n*x memory intead of x
+		   
+		   this means that, for the first time ever you can have gauranteed empty memory
+		   
+		   int *p;
+		   p = (int *)calloc(5,sizeof(int));
+
+	realloc(void *, int x)
+		   changes the amount of memory allocated to a given block
+		   only works if you are pointing to the beginning of an allocated block
+
+		   this can be used to shrink an allocated memory block and free up memory
+
+		   
+	free
+		releases dynamically allocated memory
+
+		takes one a pointer to the beginning of a block
+
+		JAVA GARBAGE COLLECTOR
