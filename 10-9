@@ -18,3 +18,9 @@ OPERATION
 
 		Remember that you can do numbers other than 1 and -1
 		if you put -x the semaphore must be >=x for the operation to work
+
+	sem_flag
+		
+		SEM_UNDO: allows os to undo the semaphore operation if your code crashes
+
+		IPC_NOWAIT: tells program to just return an error instead of waiting for availability
