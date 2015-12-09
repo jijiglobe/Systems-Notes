@@ -1,0 +1,20 @@
+OPERATION
+	
+	A pointer to a struct sembuf value
+	
+	struct sembuf {
+	       short sem_op;
+	       short sem_num;
+	       short sem_flag;
+	}
+
+	
+	sem_num
+		the index of the semaphore you want to work on
+		
+	sem_op
+		-1: down 1
+		1: up 1
+
+		Remember that you can do numbers other than 1 and -1
+		if you put -x the semaphore must be >=x for the operation to work
